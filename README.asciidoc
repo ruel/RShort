@@ -8,11 +8,11 @@ To install and use this script, first you must edit the .htaccess file on the di
 
 RewriteEngine on
 RewriteRule ^([a-zA-Z0-9]{5})$ rshort.php?hash=$1
-
+ *******************
 === NOTE
 
 If you are installing the script at a subdirectory, include the subdirectory path unless the .htaccess is placed there aswell.
-
+ *******************
 Next, create a database and create a table using this:
 
 CREATE TABLE rshort (
@@ -23,7 +23,8 @@ CREATE TABLE rshort (
 );
 
 Then, edit the CONFIG part on the script itself. Change the following variables:
-
+[php]
+code~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Start CONFIG
 
 // DATABASE
@@ -37,6 +38,7 @@ $sitename 	= '';
 
 // End CONFIG
 
+code~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 == CONTACT
 
 If there are questions or comments, and you want to talk to me personally, contact me at ruel[ @ ]ruel.me.
@@ -49,7 +51,7 @@ If there are questions or comments, and you want to talk to me personally, conta
 
 == LICENSE
 
-RShort is Copyright (c) 2010 Ruel Pagayon - http://ruel.me
+RShort is Copyright (C) 2010 Ruel Pagayon - http://ruel.me
 
 This code is licensed to you under the terms of the GNU GPL, version 3; see:
  http://www.gnu.org/licenses/gpl-3.0.txt
