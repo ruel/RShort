@@ -6,7 +6,7 @@ RShort is a simple URL shortener written in PHP. To use the script, you must hav
 
 To install and use this script, first you must edit the .htaccess file on the directory where the hash will originate from. Example, if your desired url looks like 'http://example.com/r5Tyu', the .htaccess to be edited must be on the site's root/home directory. Add these lines at the top of your .htaccess file:
 
-[source,text]
+[code,text]
 ----------------------------------------------
 RewriteEngine on
 RewriteRule ^([a-zA-Z0-9]{5})$ rshort.php?hash=$1
@@ -18,7 +18,7 @@ If you are installing the script at a subdirectory, include the subdirectory pat
 *******************
 Next, create a database and create a table using this:
 
-[source,mysql]
+[code,mysql]
 ----------------------------------------------
 CREATE TABLE rshort (
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -30,7 +30,7 @@ CREATE TABLE rshort (
 
 Then, edit the CONFIG part on the script itself. Change the following variables:
 
-[source,php]
+[code,php]
 ----------------------------------------------
 // Start CONFIG
 
