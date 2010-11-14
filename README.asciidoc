@@ -23,7 +23,7 @@ CREATE TABLE rshort (
 );
 
 Then, edit the CONFIG part on the script itself. Change the following variables:
-[php]
+
 code~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Start CONFIG
 
