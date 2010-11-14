@@ -13,9 +13,9 @@ RewriteRule ^([a-zA-Z0-9]{5})$ rshort.php?hash=$1
 ----------------------------------------------
 
 === NOTE
- *******************
+*******************
 If you are installing the script at a subdirectory, include the subdirectory path unless the .htaccess is placed there aswell.
- *******************
+*******************
 Next, create a database and create a table using this:
 
 [source,mysql]
