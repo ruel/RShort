@@ -1,53 +1,53 @@
-== ABOUT
+#ABOUT
 
 RShort is a simple URL shortener written in PHP. To use the script, you must have a html page to pass the post data. The hash it provides is random (sort of) and has a length of 5. The script only returns either the shortened URL or an error, so this can be used on different applications. You can see a demo on: http://ruel.me/rshort
 
-== INSTALLING
+#INSTALLING
 
 To install and use this script, first you must edit the .htaccess file on the directory where the hash will originate from. Example, if your desired url looks like 'http://example.com/r5Tyu', the .htaccess to be edited must be on the site's root/home directory. Add these lines at the top of your .htaccess file:
 
-RewriteEngine on
-RewriteRule ^([a-zA-Z0-9]{5})$ rshort.php?hash=$1
+	RewriteEngine on
+	RewriteRule ^([a-zA-Z0-9]{5})$ rshort.php?hash=$1
 
-=== NOTE
+**NOTE**
 
 If you are installing the script at a subdirectory, include the subdirectory path unless the .htaccess is placed there aswell.
 
 Next, create a database and create a table using this:
 
-CREATE TABLE rshort (
-  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  url VARCHAR(2083),
-  hash VARCHAR(10) NOT NULL UNIQUE,
-  created TIMESTAMP DEFAULT NOW()
-);
+	CREATE TABLE rshort (
+	  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	  url VARCHAR(2083),
+	  hash VARCHAR(10) NOT NULL UNIQUE,
+	  created TIMESTAMP DEFAULT NOW()
+	);
 
 Then, edit the CONFIG part on the script itself. Change the following variables:
 
-// Start CONFIG
+	// Start CONFIG
 
-// DATABASE
-$dbserver 	= '';
-$dbuser 	= '';
-$dbpass 	= '';
-$dbname 	= '';
+	// DATABASE
+	$dbserver 	= '';
+	$dbuser 	= '';
+	$dbpass 	= '';
+	$dbname 	= '';
 
-// SITE NAME (With trailing forward slash)
-$sitename 	= '';
+	// SITE NAME (With trailing forward slash)
+	$sitename 	= '';
 
-// End CONFIG
+	// End CONFIG
 
-== CONTACT
+#CONTACT
 
 If there are questions or comments, and you want to talk to me personally, contact me at ruel[ @ ]ruel.me.
 
-== TODO
+#TODO
 
 - Might aswell add more features to the script.
 - Add a custom hash feature.
 - Improve the hashing.
 
-== LICENSE
+#LICENSE
 
 RShort is Copyright (c) 2010 Ruel Pagayon - http://ruel.me
 
