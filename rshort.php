@@ -107,11 +107,10 @@
 			return 0;
 		}
 		// Writing an array this large is a pain :p
-		$stsp = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-		$chars = str_split($stsp);
+		$stsp = 'acefghjkpqrstwxyz23456789';
 		$res = "";
 		for ($i = 1; $i < $len; $i++)
-			$res .= $chars[rand(0, 61)];
+			$res .= $stsp[mt_rand(0, 61)];
 		return $res;
 	}
 	
