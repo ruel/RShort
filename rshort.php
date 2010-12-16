@@ -110,7 +110,7 @@
 		$stsp = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
 		$chars = str_split($stsp);
 		$res = "";
-		for ($i = 1; $i < 10; $i++)
+		for ($i = 1; $i < $len; $i++)
 			$res .= $chars[rand(0, 61)];
 		return $res;
 	}
