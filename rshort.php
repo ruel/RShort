@@ -109,8 +109,8 @@
 		// Writing an array this large is a pain :p
 		$stsp = 'acefghjkpqrstwxyz23456789';
 		$res = "";
-		for ($i = 1; $i < $len; $i++)
-			$res .= $stsp[mt_rand(0, 25)];
+		for ($i = 0; $i < $len; $i++)
+			$res .= $stsp[mt_rand(0, 24)];
 		return $res;
 	}
 ?>
