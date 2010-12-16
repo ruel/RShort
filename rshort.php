@@ -75,7 +75,7 @@
 			// Check if the hash already exist in the database. If it does, generate another one.
 			$existing_hash = true;
 			while ($existing_hash) {
-				$hash = gen_hash($url, 5);
+				$hash = gen_str(5);
 				$result = mysql_query("SELECT * FROM rshort WHERE hash = '" . $hash . "'", $mcon);
 				if (mysql_num_rows($result) == 0) {
 					$existing_hash = false;
@@ -110,18 +110,7 @@
 		$stsp = 'acefghjkpqrstwxyz23456789';
 		$res = "";
 		for ($i = 1; $i < $len; $i++)
-			$res .= $stsp[mt_rand(0, 61)];
+			$res .= $stsp[mt_rand(0, 25)];
 		return $res;
-	}
-	
-	// Function to generate the hash. This hashing method is pretty unique, and random.
-	function gen_hash($inp, $len) {
-		if ($len < 1) {
-			return 0;
-		}
-		$rsalt = gen_str(10);
-		$thash = str_shuffle(md5(md5($url) . $rsalt . md5($rsalt)) . $rsalt);
-		$hash = substr($thash, rand(0,31 - $len), $len);
-		return $hash;
 	}
 ?>
